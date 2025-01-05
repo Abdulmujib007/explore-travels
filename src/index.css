@@ -4,6 +4,17 @@
 *,**{
   box-sizing: border-box;
 }
+.emptyDiv{
+  visibility: hidden;
+  opacity: 0;
+  /* transform: translateY(100px); */
+  transition: opacity 1s
+}
+.inView{
+  visibility: visible;
+  opacity: 1;
+  /* transform: translateY(0px) */
+}
 
 @tailwind base;
 @tailwind components;

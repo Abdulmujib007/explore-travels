@@ -5,10 +5,18 @@ const Navbar = () => {
         <img className="mobile:w-32 laptop:w-fit" src="/img/Logo.png" alt="" />
       </section>
       <section className="mobile:hidden laptop:flex laptop:gap-6 text-plore-primGreen text-lg">
-        <p>about</p>
-        <p>destination</p>
-        <p>blog</p>
-        <p>contact</p>
+        <p>
+          <a href="#about">about</a>
+          </p>
+        <p>
+          <a href="#destination">destination</a>
+          </p>
+        <p>
+          <a href="#testimonial">blog</a>
+          </p>
+        <p>
+          <a href="#contact">Contact</a>
+        </p>
       </section>
       <img className="laptop:hidden mobile:block" src="/img/material-symbols_menu.png" alt="" />
     </div>

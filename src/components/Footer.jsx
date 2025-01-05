@@ -34,7 +34,7 @@ const Footer = () => {
               <p>Destinations</p>
             </div>
           </section>
-          <section className="pt-12 flex flex-col gap-4 items-start laptop:flex-row laptop:justify-between">
+          <section id="contact" className="pt-12 flex flex-col gap-4 items-start laptop:flex-row laptop:justify-between">
             <p className="text-xl">&copy; 9ja explore.made by MJ</p>
             <div className="flex flex-col gap-4 laptop:flex-row laptop:gap-5">
               <p>Instagram</p>
