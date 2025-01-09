@@ -1,21 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root{
   font-size: 16px;
 }
 *,**{
   box-sizing: border-box;
 }
+.containerDiv{
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100dvw;
+  height: 100dvh;
+}
+.main{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
 .emptyDiv{
   visibility: hidden;
-  opacity: 0;
-  /* transform: translateY(100px); */
-  transition: opacity 1s
-}
-.inView{
-  visibility: visible;
-  opacity: 1;
-  /* transform: translateY(0px) */
+  opacity: 0; 
+  transition: opacity 2s;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ .inView{ 
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 700ms; 
+
+  transform: translateY(0px)
+}
+

@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="w-screen fixed bg-plore-white flex justify-between items-center laptop:px-32 laptop:py-11 mobile:p-9 border-b-[1px] border-plore-darkGreen">
+    <div className="w-screen bg-plore-white flex justify-between items-center laptop:px-32 laptop:py-11 mobile:p-9 border-b-[1px] border-plore-darkGreen">
       <section>
         <img className="mobile:w-32 laptop:w-fit" src="/img/Logo.png" alt="" />
       </section>

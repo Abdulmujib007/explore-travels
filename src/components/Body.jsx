@@ -1,10 +1,10 @@
 import { useInView } from "react-intersection-observer";
 
-const exploreSection = (ref, inView) => {
+const exploreSection = (ref,inView) => {
   return (
     <div
       ref={ref}
-      className={`${inView === true ? 'inView' : ''} emptyDiv laptop:pt-28 mobile:pt-14 mobile:px-3 laptop:px-0`}
+      className={`${inView === true ? 'inView':'emptyDiv'} mobile:px-3 laptop:px-0`}
     >
       { (
         <>
@@ -60,16 +60,16 @@ const exploreSection = (ref, inView) => {
     </div>
   );
 };
-const destinationSection = (ref, inView) => {
+const destinationSection = (ref,inView) => {
   return (
     <div
-    id="destination"
+      id="destination"
       ref={ref}
       className={` ${
-        inView === true ? "inView" : ""
-      } emptyDiv mt-5 laptop:mt-15 bg-plore-accent2 mb-16 pb-7 laptop:mb-28 laptop:pb-12`}
+        inView === true ? "inView" : "emptyDiv"
+      } mt-5 laptop:mt-15 bg-plore-accent2 mb-16 pb-7 laptop:mb-28 laptop:pb-12`}
     >
-      { (
+      {
         <>
           <p className="font-sans font-semibold text-center text-4xl pt-2 laptop:pt-3">
             Featured Destinations
@@ -151,13 +151,17 @@ const destinationSection = (ref, inView) => {
             </button>
           </div>
         </>
-      )}
+      }
     </div>
   );
 };
-const retreatSection = (ref, inView) => {
+const retreatSection = (ref,inView) => {
   return (
-    <div id="about" className={`${inView === true ? "inView" : ""} emptyDiv`} ref={ref}>
+    <div
+      id="about"
+      ref={ref}
+      className={`${inView === true ? "inView" : "emptyDiv"}`}
+    >
       {
         <>
           <p className="text-center px-6 py-63 laptop:pt-0 font-semibold text-4xl laptop:text-5xl laptop:py-20 laptop:text-left laptop:px-32">
@@ -205,14 +209,14 @@ const retreatSection = (ref, inView) => {
     </div>
   );
 };
-const testimonialSection = (ref, inView) => {
+const testimonialSection = (ref,inView) => {
   return (
     <div
-    id="testimonial"
+      id="testimonial"
       ref={ref}
-      className={`${
-        inView === true ? "inView" : ""
-      } pt-16 laptop:pt-20 laptop:px-40 px-6 emptyDiv`}
+      className={` ${
+        inView === true ? "inView" : "emptyDiv"
+      } pt-16 laptop:pt-20 laptop:px-40 px-6`}
     >
       {
         <>
@@ -253,31 +257,26 @@ const Body = () => {
   const { ref: ref1, inView: inView1 } = useInView({
     /* Optional options */
     threshold: 0,
-    // triggerOnce:true
   });
   const { ref: ref2, inView: inView2 } = useInView({
     /* Optional options */
     threshold: 0,
-    // triggerOnce: true,
   });
   const { ref: ref3, inView: inView3 } = useInView({
     /* Optional options */
     threshold: 0,
-    // triggerOnce: true,
   });
   const { ref: ref4, inView: inView4 } = useInView({
     /* Optional options */
     threshold: 0,
-    // triggerOnce: true,
   });
-  console.log({ inView2, inView3, inView4 });
   return (
     <div>
-      {exploreSection(ref1, inView1)}
-      {destinationSection(ref2, inView2)}
-      {retreatSection(ref3, inView3)}
-      {testimonialSection(ref4, inView4)}
+      {exploreSection(ref1,inView1)}
+      {destinationSection(ref2,inView2)}
+      {retreatSection(ref3,inView3)}
+      {testimonialSection(ref4,inView4)}
     </div>
-  );
+  ); 
 };
 export default Body;
