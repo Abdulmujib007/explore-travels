@@ -10,7 +10,7 @@ const Footer = () => {
           Get weekly tips to plan your next escape <br></br> right in your inbox
         </p>
         <section className="flex flex-col laptop:flex-row laptop:justify-center laptop:gap-6 items-center gap-6">
-          <div className="p-6 bg-plore-white">
+          <div className="p-6 bg-plore-white rounded-lg">
             <input
               className="outline-none"
               type="text"
@@ -19,7 +19,7 @@ const Footer = () => {
               id=""
             />
           </div>
-          <button className="px-[21px] py-5 bg-plore-secGreen outline-none font-semibold text-2xl italic text-plore-white">
+          <button className="px-[21px] py-5 bg-plore-secGreen outline-none font-semibold text-2xl italic text-plore-white rounded-full">
             Subscribe
           </button>
         </section>

@@ -1,8 +1,10 @@
 import { useInView } from "react-intersection-observer";
+// import { useState } from "react";
 
 const exploreSection = (ref,inView) => {
   return (
     <div
+      id="home"
       ref={ref}
       className={`${inView === true ? 'inView':'emptyDiv'} mobile:px-3 laptop:px-0`}
     >
@@ -18,18 +20,18 @@ const exploreSection = (ref,inView) => {
                 Explore the <br></br> beauty of <br></br>Nigeria
               </p>
               <div className="flex laptop:flex-row mobile:flex-col items-center  gap-3 h-fit">
-                <div className="  flex items-center pr-3 pl-2 py-3 border-[1px] border-plore-primGreen">
+                <div className="  flex items-center pr-3 pl-2 py-3 border-[1px] border-plore-primGreen rounded-lg">
                   <input
-                    className="outline-none placeholder:italic laptop:placeholder:text-xl laptop:text-xl text-plore-primGreen placeholder:text-plore-primGreen"
+                    className="outline-none placeholder:italic laptop:placeholder:text-xl laptop:text-xl text-plore-primGreen placeholder:text-plore-primGreen "
                     placeholder="search destinations"
                     type="text"
                   />
                 </div>
-                <button className="w-fit h-fit p-5 py-3 text-2xl text-plore-white bg-plore-primGreen">
+                <button className="w-fit h-fit p-5 py-3 text-2xl text-plore-white bg-plore-primGreen rounded-full">
                   Explore
                 </button>
               </div>
-              <p className=" laptop:text-xl mobile:text-sm inline-block mobile:pt-8 mobile:pb-12 laptop:pt-0 mobile:text-nowrap ">
+              <p className=" laptop:text-xl mobile:text-sm inline-block mobile:pt-8 mobile:pb-12 laptop:pt-0 mobile:text-nowrap text-plore-primGreen ">
                 Still deciding where to go?{" "}
                 <span className="text-plore-darkGreen ">
                   Explore destinations
@@ -210,6 +212,7 @@ const retreatSection = (ref,inView) => {
   );
 };
 const testimonialSection = (ref,inView) => {
+ 
   return (
     <div
       id="testimonial"
@@ -254,6 +257,9 @@ const testimonialSection = (ref,inView) => {
   );
 };
 const Body = () => {
+
+   
+
   const { ref: ref1, inView: inView1 } = useInView({
     /* Optional options */
     threshold: 0,
@@ -271,6 +277,7 @@ const Body = () => {
     threshold: 0,
   });
   return (
+    
     <div>
       {exploreSection(ref1,inView1)}
       {destinationSection(ref2,inView2)}
