@@ -76,7 +76,7 @@ const destinationSection = (ref,inView) => {
           <p className="font-sans font-semibold text-center text-4xl pt-2 laptop:pt-3">
             Featured Destinations
           </p>
-          <div className="pt-12 laptop:pt-14 laptop:px-32 laptop:pb-16 pb-12 px-6 flex flex-col gap-10 laptop:gap-16 laptop:flex-row ">
+          <div className="pt-12 laptop:pt-14 laptop:px-32 laptop:pb-16 pb-12 px-6 flex flex-col gap-10  justify-between  laptop:flex-row laptop:w-full ">
             <div className="flex flex-col">
               <img src="/img/image 95 (2).png" alt="" />
               <div className="flex flex-col gap-5 py-6 pl-4 bg-plore-white rounded-b-xl">
@@ -197,7 +197,7 @@ const retreatSection = (ref,inView) => {
             <img src="/img/Rectangle 5782.png" alt="" />
           </div>
           <img
-            className="laptop:block mobile:hidden"
+            className="laptop:block mobile:hidden w-full"
             src="/img/Email.png"
             alt=""
           />
@@ -223,8 +223,8 @@ const testimonialSection = (ref,inView) => {
     >
       {
         <>
-          <div className="flex flex-col laptop:flex-row">
-            <section className="py-10 laptop:py-14 laptop:px-12 px-5 bg-plore-darkGreen rounded-t-lg flex flex-col gap-6">
+          <div className="flex flex-col laptop:flex-row w-full justify-center  ">
+            <section className="py-10 laptop:py-14 laptop:px-12 px-5 bg-plore-darkGreen rounded-t-lg flex flex-col gap-6  items-start">
               <p className="text-plore-white font-bold text-3xl laptop:text-4xl pb-5 laptop:pb-7 ">
                 Testimonials
               </p>
@@ -249,7 +249,7 @@ const testimonialSection = (ref,inView) => {
             <img className="w-full" src="/img/Frame 33.png" alt="" />
           </div>
           <div className="flex justify-center pt-12 pb-16 laptop:pb-20">
-            <img src="/img/carousel.png" alt="" />
+            <img className="w-[10%]" src="/img/carousel.png" alt="" />
           </div>
         </>
       }
